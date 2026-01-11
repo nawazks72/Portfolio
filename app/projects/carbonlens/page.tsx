@@ -21,25 +21,25 @@ export default function CarbonLens() {
     };
 
     return (
-        <main className="min-h-screen bg-slate-950 selection:bg-green-500/30">
+        <main className="min-h-screen bg-background selection:bg-accent-secondary/30">
 
             {/* Navigation */}
-            <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
+            <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
                 <div className="container mx-auto px-6 py-4 flex items-center justify-between">
                     <Link
                         href="/"
-                        className="flex items-center gap-2 text-white/80 hover:text-white transition-colors group"
+                        className="flex items-center gap-2 text-text-muted hover:text-foreground transition-colors group"
                     >
                         <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                         <span className="font-medium">Back to Portfolio</span>
                     </Link>
-                    <div className="text-green-400 font-bold text-xl tracking-tighter">CarbonLens</div>
+                    <div className="text-accent-secondary font-bold text-xl tracking-tighter">CarbonLens</div>
                 </div>
             </nav>
 
             {/* Hero Section */}
             <section className="pt-32 pb-20 px-6 relative overflow-hidden">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-green-600/20 blur-[120px] -z-10 rounded-full mix-blend-screen" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-accent-secondary/20 blur-[120px] -z-10 rounded-full mix-blend-screen" />
 
                 <motion.div
                     className="container mx-auto max-w-5xl"
@@ -49,26 +49,26 @@ export default function CarbonLens() {
                 >
                     {/* Achievement Badge */}
                     <motion.div variants={fadeInUp} className="flex justify-center mb-8">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-medium">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-secondary/10 border border-accent-secondary/30 text-accent-secondary text-sm font-medium">
                             <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-secondary opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-secondary"></span>
                             </span>
                             🏆 Ideathon Finalist (Top 100+ Teams)
                         </div>
                     </motion.div>
 
-                    <motion.h1 variants={fadeInUp} className="text-5xl lg:text-7xl font-bold text-center text-white mb-8 tracking-tight">
-                        Track. Understand. <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">Reduce.</span>
+                    <motion.h1 variants={fadeInUp} className="text-5xl lg:text-7xl font-bold text-center text-foreground mb-8 tracking-tight">
+                        Track. Understand. <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-secondary to-accent-primary">Reduce.</span>
                     </motion.h1>
 
-                    <motion.p variants={fadeInUp} className="text-xl text-white/70 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+                    <motion.p variants={fadeInUp} className="text-xl text-text-muted text-center max-w-3xl mx-auto mb-12 leading-relaxed">
                         An AI-driven Personal Carbon Footprint Analyzer & Green Lifestyle Assistant. Built for smarter, greener living.
                     </motion.p>
 
                     <motion.div
                         variants={fadeInUp}
-                        className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-green-500/20 mb-20 group"
+                        className="relative w-full aspect-video rounded-2xl overflow-hidden border border-border shadow-2xl shadow-accent-secondary/20 mb-20 group"
                     >
                         <Image
                             src="/projects/carbonlens-3.png"
@@ -83,7 +83,7 @@ export default function CarbonLens() {
 
             {/* Overview & Tech Stack */}
             <motion.section
-                className="py-20 px-6 bg-white/5"
+                className="py-20 px-6 bg-background-secondary"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -95,7 +95,7 @@ export default function CarbonLens() {
                         {/* About */}
                         <div className="lg:col-span-2 space-y-8">
                             <motion.h2
-                                className="text-3xl font-bold text-white"
+                                className="text-3xl font-bold text-foreground"
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
@@ -103,7 +103,7 @@ export default function CarbonLens() {
                             >
                                 Project Overview
                             </motion.h2>
-                            <div className="prose prose-invert text-white/80 leading-relaxed space-y-4">
+                            <div className="prose prose-invert text-text-muted leading-relaxed space-y-4">
                                 <motion.p
                                     initial={{ opacity: 0, y: 10 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -123,7 +123,7 @@ export default function CarbonLens() {
                                     Our unified ecosystem combines a footprint analyzer, a real-time "What-If" simulator, and gamified leaderboards to motivate sustainable behavior.
                                 </motion.p>
                                 <motion.h3
-                                    className="text-xl font-semibold text-green-300 pt-4"
+                                    className="text-xl font-semibold text-accent-secondary pt-4"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     viewport={{ once: true }}
@@ -144,25 +144,25 @@ export default function CarbonLens() {
 
                         {/* Tech Stack */}
                         <motion.div
-                            className="bg-slate-900/50 p-8 rounded-2xl border border-white/10 h-fit"
+                            className="bg-background-secondary p-8 rounded-2xl border border-border h-fit"
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
                             <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                                <div className="w-1 h-6 bg-green-500 rounded-full" />
+                                <div className="w-1 h-6 bg-accent-secondary rounded-full" />
                                 Tech Stack
                             </h3>
 
                             <div className="space-y-6">
                                 <div>
-                                    <div className="text-sm text-green-400 mb-2 uppercase tracking-wider font-semibold">Frontend</div>
+                                    <div className="text-sm text-accent-secondary mb-2 uppercase tracking-wider font-semibold">Frontend</div>
                                     <div className="flex flex-wrap gap-2">
                                         {["Streamlit", "Neon Aesthetics", "Interactive Charts"].map((tech, i) => (
                                             <motion.span
                                                 key={tech}
-                                                className="px-3 py-1 rounded-md bg-green-500/10 border border-green-500/20 text-green-300 text-sm"
+                                                className="px-3 py-1 rounded-md bg-accent-secondary/10 border border-accent-secondary/20 text-accent-secondary text-sm"
                                                 initial={{ opacity: 0, scale: 0.8 }}
                                                 whileInView={{ opacity: 1, scale: 1 }}
                                                 viewport={{ once: true }}
@@ -211,11 +211,11 @@ export default function CarbonLens() {
                                 </div>
                             </div>
 
-                            <div className="mt-8 pt-8 border-t border-white/10">
+                            <div className="mt-8 pt-8 border-t border-border">
                                 <Link
                                     href="https://github.com/tasneem38/CarbonLens1"
                                     target="_blank"
-                                    className="flex items-center justify-center gap-2 w-full py-3 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-lg transition-all shadow-lg shadow-green-900/20 hover:shadow-green-700/40"
+                                    className="flex items-center justify-center gap-2 w-full py-3 bg-accent-secondary hover:bg-accent-secondary/80 text-background font-semibold rounded-lg transition-all shadow-lg shadow-accent-secondary/20 hover:shadow-accent-secondary/40"
                                 >
                                     <Github className="w-5 h-5" />
                                     View Source Code
@@ -235,11 +235,11 @@ export default function CarbonLens() {
                 transition={{ duration: 0.8 }}
             >
                 <div className="container mx-auto max-w-6xl">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
-                        Core Features: A <span className="text-green-400">Unified Ecosystem</span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-16">
+                        Core Features: A <span className="text-accent-secondary">Unified Ecosystem</span>
                     </h2>
 
-                    <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                    <div className="relative w-full rounded-2xl overflow-hidden border border-border shadow-2xl">
                         <Image
                             src="/projects/carbonlens-1.png"
                             alt="CarbonLens Core Features"
@@ -249,7 +249,7 @@ export default function CarbonLens() {
                         />
                     </div>
 
-                    <div className="mt-12 relative w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                    <div className="mt-12 relative w-full rounded-2xl overflow-hidden border border-border shadow-2xl">
                         <Image
                             src="/projects/carbonlens-2.png"
                             alt="CarbonLens UI Vision"
@@ -285,18 +285,18 @@ export default function CarbonLens() {
             </motion.section>
 
             {/* Footer CTA */}
-            <footer className="py-20 border-t border-green-500/20 text-center">
+            <footer className="py-20 border-t border-border text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <h2 className="text-2xl text-white font-bold mb-6">Explore the Code</h2>
+                    <h2 className="text-2xl text-foreground font-bold mb-6">Explore the Code</h2>
                     <Link
                         href="https://github.com/tasneem38/CarbonLens1"
                         target="_blank"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 hover:bg-green-500 text-white font-bold rounded-full hover:scale-105 transition-transform shadow-lg shadow-green-900/40"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-accent-secondary hover:bg-accent-secondary/80 text-background font-bold rounded-full hover:scale-105 transition-transform shadow-lg shadow-accent-secondary/40"
                     >
                         <Github className="w-6 h-6" />
                         Visit GitHub Repository

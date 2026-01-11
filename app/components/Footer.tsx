@@ -1,23 +1,33 @@
+"use client";
+import { Github, Linkedin, Instagram, Mail, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { personalInfo } from "../data/info";
+import { motion } from "framer-motion";
 
 export default function Footer(): React.JSX.Element {
   return (
-    <footer id="contact" className="py-10  px-6 border-t border-white/10">
+    <motion.footer
+      id="contact"
+      className="py-10  px-6 border-t border-border"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Contact
           </h2>
-          <p className="text-md text-white/80 max-w-2xl mx-auto mb-8">
+          <p className="text-md text-text-muted max-w-2xl mx-auto mb-8">
             I&apos;m currently looking to join a cross-functional team that values
             improving people&apos;s lives through accessible design, or have a project
             in mind? Let&apos;s connect.
           </p>
           <a
             href={`mailto:${personalInfo.email}`}
-            className="text-md text-purple-400 hover:text-purple-300 transition-colors"
+            className="text-md text-accent-primary hover:text-accent-secondary transition-colors"
           >
             {personalInfo.email}
           </a>
@@ -29,7 +39,7 @@ export default function Footer(): React.JSX.Element {
             href={personalInfo.socialLinks.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-purple-500/30 hover:border-purple-500/50 transition-all"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 border border-accent-primary/30 hover:border-accent-primary transition-all"
             aria-label="Instagram"
           >
             <Image
@@ -44,11 +54,11 @@ export default function Footer(): React.JSX.Element {
             href={personalInfo.socialLinks.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-purple-500/30 hover:border-purple-500/50 transition-all"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 border border-accent-primary/30 hover:border-accent-primary transition-all"
             aria-label="GitHub"
           >
             <svg
-              className="w-5 h-5 text-white"
+              className="w-5 h-5 text-foreground"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -59,11 +69,11 @@ export default function Footer(): React.JSX.Element {
             href={personalInfo.socialLinks.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-purple-500/30 hover:border-purple-500/50 transition-all"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 border border-accent-primary/30 hover:border-accent-primary transition-all"
             aria-label="LinkedIn"
           >
             <svg
-              className="w-5 h-5 text-white"
+              className="w-5 h-5 text-foreground"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -72,13 +82,13 @@ export default function Footer(): React.JSX.Element {
           </Link>
         </div>
 
-        <div className="text-center mt-12 pt-8 border-t border-white/10">
-          <p className="text-white/60 text-sm">
+        <div className="text-center mt-12 pt-8 border-t border-border">
+          <p className="text-text-muted/60 text-sm">
             © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
           </p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
 

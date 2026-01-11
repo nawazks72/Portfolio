@@ -24,6 +24,30 @@ export const personalInfo = {
         titleHighlight: "reality",
         description: "Building clean, user-friendly applications driven by data."
     },
+    experienceTitle: "Work Experience",
+    projects: [
+        {
+            id: 1,
+            title: "CarbonLens – AI Eco-Tracker",
+            description: "An AI-powered personal footprint analyzer that uses Llama-3.1 to provide personalized sustainability coaching. Features a neon-aesthetic dashboard, real-time emission tracking, and 'What-If' scenarios to help users understand and reduce their environmental impact.",
+            link: "/projects/carbonlens",
+            image: "/projects/carbonlens-3.png",
+        },
+        {
+            id: 2,
+            title: "BharatVerse – Virtual Heritage",
+            description: "A secure, immersive virtual environment designed to showcase India's digital heritage. Selected as a Top 26 Finalist in a national hackathon, it features 3D navigation and interactive cultural storytelling.",
+            link: "/projects/bharatverse",
+            image: "/projects/bharatverse-hero.png",
+        },
+        {
+            id: 3,
+            title: "Smart Community Health – AI Analytics",
+            description: "A comprehensive health tracking initiative leveraging public data to improve local health monitoring. Features interactive maps, heart rate trend analysis, and predictive community health metrics visualized in a futuristic dashboard.",
+            link: "https://github.com/tasneem38/smart-community-health",
+            image: "/projects/smart-health.png",
+        },
+    ],
     experience: [
         {
             id: 1,

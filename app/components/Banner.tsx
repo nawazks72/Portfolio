@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { personalInfo } from "../data/info";
 
 export default function Banner(): React.JSX.Element {
@@ -49,7 +50,12 @@ export default function Banner(): React.JSX.Element {
       id="home"
       className="min-h-screen flex items-center justify-center pt-20 px-6"
     >
-      <div className="container mx-auto max-w-7xl">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="container mx-auto max-w-7xl"
+      >
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Left side - Text content */}
           {/* Right side - Character image */}
@@ -58,6 +64,8 @@ export default function Banner(): React.JSX.Element {
               {/* Mobile: Hello text positioned on top of image */}
               <div className="lg:hidden  -top-150 z-10">
                 <div className="relative inline-block ">
+                  {/* Mobile Glow */}
+                  <div className="absolute -inset-4 bg-accent-primary/20 blur-xl rounded-full"></div>
                   <Image
                     src="/assets/arrow.png"
                     alt="Arrow pointer"
@@ -67,9 +75,9 @@ export default function Banner(): React.JSX.Element {
                     style={{ width: "auto", height: "auto" }}
                   />
                   <div className="relative">
-                    <p className="text-white text-lg whitespace-nowrap">
+                    <p className="text-foreground text-lg whitespace-nowrap font-medium drop-shadow-md">
                       Hello! I Am{" "}
-                      <span className="text-purple-400">{personalInfo.name}</span>
+                      <span className="text-accent-primary drop-shadow-[0_0_10px_rgba(245,194,107,0.5)]">{personalInfo.name}</span>
                     </p>
                   </div>
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-white/10"></div>
@@ -78,7 +86,11 @@ export default function Banner(): React.JSX.Element {
               <div className="relative">
                 {/* Glow effect behind the image */}
                 <div
-                  className="absolute inset-0 bg-purple-600 rounded-full blur-[80px] opacity-60 transform scale-100"
+                  className="absolute inset-0 bg-accent-secondary rounded-full blur-[100px] opacity-40 transform scale-125"
+                  style={{ zIndex: 0 }}
+                ></div>
+                <div
+                  className="absolute inset-0 bg-accent-primary rounded-full blur-[80px] opacity-20 transform scale-110 translate-x-10"
                   style={{ zIndex: 0 }}
                 ></div>
 
@@ -87,7 +99,7 @@ export default function Banner(): React.JSX.Element {
                   alt={`${personalInfo.name} - Software Engineer`}
                   width={460}
                   height={460}
-                  className="w-[350px] h-[350px] lg:w-[460px] lg:h-[460px] object-cover relative z-10 drop-shadow-2xl rounded-full border-2 border-white/10"
+                  className="w-[350px] h-[350px] lg:w-[460px] lg:h-[460px] object-cover relative z-10 drop-shadow-2xl rounded-full border-2 border-border"
                   priority
                 />
               </div>
@@ -101,25 +113,25 @@ export default function Banner(): React.JSX.Element {
                 alt="Arrow pointer"
                 width={100}
                 height={100}
-                className="absolute "
+                className="absolute drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]"
                 style={{ left: "-100px", top: "-50px", width: "auto", height: "auto" }}
               />
               <div style={{ bottom: 40, position: "relative" }}>
-                <p className="text-white text-lg">
+                <p className="text-foreground text-lg font-medium drop-shadow-md">
                   Hello! I Am{" "}
-                  <span className="text-purple-400">{personalInfo.name}</span>
+                  <span className="text-accent-primary drop-shadow-[0_0_10px_rgba(245,194,107,0.5)]">{personalInfo.name}</span>
                 </p>
               </div>
               <div className="absolute -bottom-2 left-8 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-white/10"></div>
             </div>
             <div className="">
               <p className="text-2xl"> {personalInfo.banner.intro} </p>
-              <h1 className="text-5xl tracking-tight lg:text-7xl font-semibold text-white leading-tight">
+              <h1 className="text-5xl tracking-tight lg:text-7xl font-semibold text-foreground leading-tight">
                 {personalInfo.banner.titlePart1}
                 <br /> {personalInfo.banner.titlePart2}{" "}
                 <span className="relative inline-block">
                   <Image src="/assets/circle.png" alt="Circle" width={200} height={200} className="absolute mt-2" />
-                  <span className="bg-gradient-to-r from-violet-600 via-violet-400 to-violet-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-accent-primary via-yellow-200 to-accent-primary bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(245,194,107,0.4)]">
                     {personalInfo.banner.titleHighlight}
                   </span>
                 </span>
@@ -143,7 +155,7 @@ export default function Banner(): React.JSX.Element {
             {personalInfo.bio}
           </p>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

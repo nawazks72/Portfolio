@@ -1,13 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #110720;
-  --foreground: #ffffff;
+  /* User Palette - Refined for Contrast */
+  --background: #0F172A;
+  /* Midnight Blue */
+  --background-secondary: #020617;
+  /* Deep Navy (Darker) */
+  --foreground: #F8FAFC;
+  /* Bright White (was Soft White) */
+  --text-muted: #CBD5E1;
+  /* Slate-300 (Much lighter than Slate-400) */
+  --accent-primary: #F5C26B;
+  /* Soft Gold */
+  --accent-secondary: #38BDF8;
+  /* Sky Blue */
+  --border: #334155;
+  /* Slate-700 (More visible border) */
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-foreground: var(--foreground);
+  --color-text-muted: var(--text-muted);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-border: var(--border);
   --font-sans: var(--font-poppins), sans-serif;
 }
 
@@ -21,6 +39,7 @@ html {
 
 body {
   background: var(--background);
+  /* Solid Midnight Blue for perfect image blending */
   color: var(--foreground);
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
   line-height: 1.6;
