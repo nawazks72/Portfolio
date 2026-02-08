@@ -97,14 +97,15 @@ export default function Banner(): React.JSX.Element {
                   style={{ zIndex: 0 }}
                 ></div>
 
-                <Image
-                  src={personalInfo.profileImage}
-                  alt={`${personalInfo.name} - Software Engineer`}
-                  width={380}
-                  height={380}
-                  className="w-[280px] h-[280px] lg:w-[380px] lg:h-[380px] object-cover relative z-10 drop-shadow-2xl rounded-full border-2 border-border"
-                  priority
-                />
+                <div className="relative z-10 w-[280px] h-[280px] lg:w-[380px] lg:h-[380px] rounded-full border-2 border-border overflow-hidden drop-shadow-2xl">
+                  <Image
+                    src={personalInfo.profileImage}
+                    alt={`${personalInfo.name} - Software Engineer`}
+                    fill
+                    className="object-cover scale-110 hover:scale-125 transition-transform duration-500"
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>
