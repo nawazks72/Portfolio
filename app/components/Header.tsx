@@ -10,7 +10,7 @@ export default function Header(): React.JSX.Element {
             href="/"
             className="text-2xl font-bold text-foreground hover:text-accent-primary transition-colors"
           >
-            <Image src="/logo/logo.svg?v=2" alt="Tasneem Logo" width={150} height={50} style={{ width: "auto", height: "40px" }} priority />
+            <Image src="/logo/logo.svg?v=2" alt="Nawaz Portfolio Logo" width={150} height={50} style={{ width: "auto", height: "40px" }} priority />
           </Link>
           <ul className="flex items-center gap-8 list-none m-0 p-0">
             <li className="m-0 p-0">

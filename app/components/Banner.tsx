@@ -39,9 +39,12 @@ export default function Banner(): React.JSX.Element {
         return () => clearTimeout(timeout);
       } else {
         // Finished deleting, move to next text
-        setIsDeleting(false);
-        setTypingSpeed(100); // Reset typing speed
-        setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+        const timeout = setTimeout(() => {
+          setIsDeleting(false);
+          setTypingSpeed(100); // Reset typing speed
+          setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+        }, 200);
+        return () => clearTimeout(timeout);
       }
     }
   }, [displayedText, isDeleting, currentTextIndex, texts, typingSpeed]);

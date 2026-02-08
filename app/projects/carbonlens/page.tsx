@@ -120,7 +120,7 @@ export default function CarbonLens() {
                                     transition={{ delay: 0.3, duration: 0.5 }}
                                 >
                                     We were selected for the <b>Final Round</b> of a major Ideathon, ranking among the top 100 teams.
-                                    Our unified ecosystem combines a footprint analyzer, a real-time "What-If" simulator, and gamified leaderboards to motivate sustainable behavior.
+                                    Our unified ecosystem combines a footprint analyzer, a real-time &quot;What-If&quot; simulator, and gamified leaderboards to motivate sustainable behavior.
                                 </motion.p>
                                 <motion.h3
                                     className="text-xl font-semibold text-accent-secondary pt-4"
@@ -137,7 +137,7 @@ export default function CarbonLens() {
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.5, duration: 0.5 }}
                                 >
-                                    Beyond simple tracking, CarbonLens acts as a <b>Sustainability Coach</b>. It uses Llama-3.1 AI models to provide context-aware recommendations and emotional storytelling ("Why It Matters" mode) to drive real lifestyle changes.
+                                    Beyond simple tracking, CarbonLens acts as a <b>Sustainability Coach</b>. It uses Llama-3.1 AI models to provide context-aware recommendations and emotional storytelling (&quot;Why It Matters&quot; mode) to drive real lifestyle changes.
                                 </motion.p>
                             </div>
                         </div>

@@ -1,81 +1,66 @@
 export const personalInfo = {
-    name: "TASNEEM BANU",
+    name: "Nawaz Ahamed KS",
     jobTitles: [
-        "Software Engineer",
         "Frontend Developer",
-        "Data Analytics Enthusiast"
+        "Python Developer",
+        "Machine Learning Enthusiast"
     ],
     currentRole: {
-        text: "CS Undergraduate · Frontend & Data Analytics",
-        company: "", // Intentionally empty as per request for "CS Undergraduate..." without specific company logo requirement for now, or implied general experience
+        text: "Frontend & Python Developer",
+        company: "",
     },
-    bio: "Computer Science undergraduate with hands-on internship experience in frontend development and data analytics. Passionate about building clean, user-friendly web applications and transforming raw data into meaningful insights using Python and SQL.",
-    email: "sh29tasneem@gmail.com",
+    bio: "Front-end & Python developer | Building intelligent apps | Exploring ML & web tech 🚀",
+    email: "nawazahamedks@gmail.com",
     socialLinks: {
-        github: "https://github.com/tasneem38",
-        linkedin: "https://www.linkedin.com/in/tasneem-banu38",
-        instagram: "https://www.instagram.com/tasneem38_"
+        github: "https://github.com/nawazks72",
+        linkedin: "https://www.linkedin.com/in/nawaz-ahamed-ks/",
+        instagram: "" // Not provided
     },
-    profileImage: "/assets/TASNEEM_Profile 1.jpg",
+    profileImage: "/assets/nawaz-profile.jpg",
     banner: {
-        intro: "A Developer who",
-        titlePart1: "Transforms ideas",
-        titlePart2: "into digital",
-        titleHighlight: "reality",
-        description: "Building clean, user-friendly applications driven by data."
+        intro: "Hi, I'm Nawaz",
+        titlePart1: "Building",
+        titlePart2: "Intelligent",
+        titleHighlight: "Apps",
+        description: "Front-end & Python developer exploring the intersection of web tech and machine learning."
     },
-    experienceTitle: "Work Experience",
+    experienceTitle: "Startups & Projects",
     projects: [
         {
             id: 1,
-            title: "CarbonLens – AI Eco-Tracker",
-            description: "An AI-powered personal footprint analyzer that uses Llama-3.1 to provide personalized sustainability coaching. Features a neon-aesthetic dashboard, real-time emission tracking, and 'What-If' scenarios to help users understand and reduce their environmental impact.",
-            link: "/projects/carbonlens",
-            image: "/projects/carbonlens-3.png",
-        },
-        {
-            id: 2,
-            title: "BharatVerse – Virtual Heritage",
-            description: "A secure, immersive virtual environment designed to showcase India's digital heritage. Selected as a Top 26 Finalist in a national hackathon, it features 3D navigation and interactive cultural storytelling.",
+            title: "BharatVerse",
+            description: "A comprehensive digital ecosystem built on the Internet Computer Protocol (ICP). Features diverse environments, avatars, and social interactions within a unified metaverse platform.",
             link: "/projects/bharatverse",
             image: "/projects/bharatverse-hero.png",
         },
         {
-            id: 3,
-            title: "Smart Community Health – AI Analytics",
-            description: "A comprehensive health tracking initiative leveraging public data to improve local health monitoring. Features interactive maps, heart rate trend analysis, and predictive community health metrics visualized in a futuristic dashboard.",
-            link: "https://github.com/tasneem38/smart-community-health",
+            id: 2,
+            title: "Smart Community Health",
+            description: "Offline-first AI-powered community health surveillance app for rural healthcare reporting and alerts. Built with TypeScript.",
+            link: "/projects/smart-community-health",
             image: "/projects/smart-health.png",
         },
-    ],
-    experience: [
-        {
-            id: 1,
-            title: "Frontend & Data Analytics Intern",
-            description: "Gained hands-on experience in building responsive web applications and analyzing large datasets to drive business insights using Python and SQL.",
-            icon: "/assets/exp1.png",
-            link: "https://www.linkedin.com/in/tasneem-banu38",
-        },
-        {
-            id: 2,
-            title: "BharatVerse - Virtual Reality",
-            description: "A Python-based immersive virtual environment project exploring the intersection of digital heritage and modern interactive technology.",
-            icon: "/assets/exp2.png",
-            link: "/projects/bharatverse",
-        },
         {
             id: 3,
-            title: "CarbonLens - Eco Tracker",
-            description: "Python application designed to track and analyze carbon footprints, helping users visualze their environmental impact through data.",
-            icon: "/assets/exp3.png",
-            link: "/projects/carbonlens",
+            title: "AI Commit Whisperer",
+            description: "AI-powered tool that generates smarter Git commit messages based on code changes. Enhances developer productivity.",
+            link: "/projects/ai-commit-whisperer",
+            image: "/projects/commit-whisperer.png",
         },
         {
             id: 4,
-            title: "Smart Community Health",
-            description: "A community-focused health tracking initiative leveraging public data to improve local health outcomes and monitoring.",
-            icon: "/assets/exp4.png",
-            link: "https://github.com/tasneem38/smart-community-health",
+            title: "Customer Sentiment Watchdog",
+            description: "Flask-based web application for sentiment analysis of customer feedback and reviews. Visualizes customer sentiment trends.",
+            link: "/projects/customer-sentiment-watchdog",
+            image: "/projects/sentiment-watchdog.png",
         },
-    ]
+        {
+            id: 5,
+            title: "CarbonLens",
+            description: "Smart, interactive carbon footprint analyzer designed to create awareness about environmental impact.",
+            link: "/projects/carbonlens",
+            image: "/projects/carbonlens-3.png",
+        }
+    ],
+    experience: []
 };

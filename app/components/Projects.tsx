@@ -25,74 +25,63 @@ export default function Projects(): React.JSX.Element {
           className="flex items-end justify-between mb-12"
         >
           <div>
-            <p className="text-accent-primary text-lg lg:text-xl mb-2 font-medium">
-              Featured Work
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Featured Projects
+            </h2>
+            <p className="text-accent-primary text-lg lg:text-xl font-medium">
+              Explore my latest work
             </p>
           </div>
         </motion.div>
 
-        <div className="space-y-20 lg:space-y-32">
-          {personalInfo.projects.map((project, index) => {
-            const isEven = index % 2 === 0;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {personalInfo.projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group flex flex-col h-full bg-slate-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-accent-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(245,194,107,0.1)]"
+            >
+              {/* Image Header */}
+              <div className="relative w-full h-48 overflow-hidden">
+                <div className="absolute inset-0 bg-accent-primary/10 group-hover:bg-transparent transition-colors z-10" />
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </div>
 
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8 }}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative"
-              >
-                {/* Text Content */}
-                <div className={`${isEven ? "lg:col-start-2" : ""}`}>
-                  <p className="text-accent-primary text-lg lg:text-xl mb-2 font-medium">
-                    Featured Project
-                  </p>
-                  <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                    {project.title}
-                  </h3>
-                  {/* Description Card - extends over image */}
-                  <div className="relative z-10 mb-6">
-                    <div className={`bg-slate-900/80 backdrop-blur-xl rounded-2xl p-6 lg:p-8 border border-white/10 shadow-xl ${isEven ? "lg:ml-[-20%]" : "lg:w-[calc(100%+20%)]"
-                      }`}>
-                      <p className="text-text-muted text-base lg:text-lg leading-relaxed">
-                        {project.description}
-                      </p>
-                    </div>
-                  </div>
-                  {/* Website link */}
-                  {project.link && (
-                    <div className="flex gap-4">
-                      <Link
-                        href={project.link}
-                        className="group flex items-center gap-2 text-foreground font-semibold hover:text-accent-primary transition-colors duration-200"
-                        aria-label="View Project Details"
-                      >
-                        <span className="font-medium">View Case Study</span>
-                        <MoveRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                      </Link>
-                    </div>
-                  )}
-                </div>
+              {/* Content Body */}
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-accent-primary transition-colors">
+                  {project.title}
+                </h3>
 
-                {/* Image Content */}
-                <div className={`${isEven ? "lg:col-start-1 lg:row-start-1" : ""}`}>
-                  <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-background-secondary p-2 lg:p-3 shadow-2xl">
-                    <div className="relative w-full h-full rounded-lg overflow-hidden border border-white/10 group-hover:border-accent-primary/30 transition-colors">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                        className="object-cover hover:scale-105 transition-transform duration-700"
-                      />
-                    </div>
+                <p className="text-text-muted text-sm leading-relaxed mb-6 flex-grow line-clamp-4">
+                  {project.description}
+                </p>
+
+                {project.link && (
+                  <div className="mt-auto pt-4 border-t border-white/5">
+                    <Link
+                      href={project.link}
+                      target={project.link.startsWith("http") ? "_blank" : "_self"}
+                      rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="inline-flex items-center gap-2 text-accent-primary font-medium hover:text-accent-secondary transition-colors"
+                    >
+                      <span>View Project</span>
+                      <MoveRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
                   </div>
-                </div>
-              </motion.div>
-            );
-          })}
+                )}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
