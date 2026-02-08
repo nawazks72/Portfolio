@@ -8,9 +8,9 @@ export default function Header(): React.JSX.Element {
         <div className="container mx-auto max-w-6xl flex items-center justify-between h-full">
           <Link
             href="/"
-            className="text-2xl font-bold text-foreground hover:text-accent-primary transition-colors"
+            className="text-2xl font-bold text-foreground hover:text-accent-primary transition-colors tracking-tighter"
           >
-            <Image src="/logo/logo.svg?v=2" alt="Nawaz Portfolio Logo" width={150} height={50} style={{ width: "auto", height: "40px" }} priority />
+            Nawaz Ahamed KS
           </Link>
           <ul className="flex items-center gap-8 list-none m-0 p-0">
             <li className="m-0 p-0">

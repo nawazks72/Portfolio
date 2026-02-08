@@ -100,9 +100,9 @@ export default function Banner(): React.JSX.Element {
                 <Image
                   src={personalInfo.profileImage}
                   alt={`${personalInfo.name} - Software Engineer`}
-                  width={460}
-                  height={460}
-                  className="w-[350px] h-[350px] lg:w-[460px] lg:h-[460px] object-cover relative z-10 drop-shadow-2xl rounded-full border-2 border-border"
+                  width={380}
+                  height={380}
+                  className="w-[280px] h-[280px] lg:w-[380px] lg:h-[380px] object-cover relative z-10 drop-shadow-2xl rounded-full border-2 border-border"
                   priority
                 />
               </div>
